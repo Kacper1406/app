@@ -1,16 +1,10 @@
-import Image from '../assets/logo192.png';
+import Logo from '../assets/airbnb-logo.png';
 
-function Navbar() {
+const Navbar = () =>{
   return (
     <header>
       <nav className='nav'>
-        <div className="nav-header">
-          <img src={Image} alt='react logo' width={30} />
-          <p>ReactFacts</p>
-        </div>
-        <ul className='nav-items'>
-          <li>React Course - Project 1</li>
-        </ul>
+        <img src={Logo} alt="" width={85}/>
       </nav>
     </header>
   );
