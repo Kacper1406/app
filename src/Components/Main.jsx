@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types';
+/* eslint-disable react/prop-types */
 import Person from '../assets/katie-zaferes.png';
 import Image from '../assets/photo-grid.png';
+import posts from '../data/posts';
 
 const PhotoGrid = () => {
   return (
@@ -19,13 +20,6 @@ const PhotoGrid = () => {
 
 const Card = props => {
 
-  Card.propTypes = {
-    price: PropTypes.string.isRequired,
-    descritption: PropTypes.string.isRequired,
-    rating: PropTypes.string.isRequired,
-    status: PropTypes.string.isRequired,
-  }
-
   return (
     <div className="card">
       <div className="card-img">
@@ -34,37 +28,30 @@ const Card = props => {
       </div>
 
       <div className="card-desc">
-        <p className='person-rating'><span>{props.rating}</span> (6) <span>USA</span></p>
+        <p className='person-rating'><span>{props.rating}</span> ({props.reviewCount}) <span>{props.country}</span></p>
         <p className='person-desc'>{props.descritption}</p>
-        <p className='person-price'><span>From {props.price}</span> / Person </p>
+        <p className='person-price'><span>From ${props.price}</span> / Person </p>
       </div>
     </div>
   )
 }
 
 const Content = () => {
+
+  const post = posts.map((item) => {
+    return (
+      <Card
+        key={item.id}
+        {...item}
+      />
+    );
+  });
+
   return (
     <main>
       <PhotoGrid/>
       <div className="card-grid">
-        <Card
-          rating="3"
-          descritption="some desc"
-          price="$1435"
-          status="sold out"
-        />
-        <Card
-          rating="5"
-          descritption="another desc"
-          price="$13"
-          status="available"
-        />
-        <Card
-          rating="6"
-          descritption="awesome dude"
-          price="$1499"
-          status="sold out"
-        />
+        {post}
       </div>
     </main>
   );
