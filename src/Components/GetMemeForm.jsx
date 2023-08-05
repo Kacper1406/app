@@ -16,7 +16,7 @@ const GetMemeForm = () => {
           <input type='text' placeholder='Top Text' id='text-1' />
           <input type='text' placeholder='Bottom text' id='text-2' />
         </div>
-        <button onClick={getMeme}>Get a new meme image 🖼</button>
+        <button onClick={getMeme}>Get your meme!</button>
       </form>
     </main>
   );
