@@ -3,12 +3,12 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
 }
 
-.app{
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,10 +17,10 @@ body {
   border: 1px solid black;
 }
 
-header{
+header {
   color: white;
   width: 550px;
-  background: linear-gradient(90deg, #672280 0%, #A626D3 100%);
+  background: linear-gradient(90deg, #672280 0%, #a626d3 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,46 +28,46 @@ header{
   padding: 0 35px;
 }
 
-header h1{
+header h1 {
   font-weight: 700;
   font-size: 20px;
 }
 
-header p{
+header p {
   font-weight: 500;
   font-size: 12px;
 }
 
-main{
+main {
   margin: 0 35px;
 }
 
-form{
+form {
   width: 100%;
 }
 
-.input-div{
+.input-div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-form input{
+form input {
   height: 35px;
   width: 220px;
   margin: 35px 0 20px 0;
   border-radius: 5px;
-  border: 1px solid #D5D4D8;
+  border: 1px solid #d5d4d8;
   text-indent: 15px;
 }
 
-form button{
+form button {
   width: 480px;
   height: 40px;
   border: none;
   border-radius: 5px;
   color: white;
-  background: linear-gradient(135deg, #711F8D 0%, #A818DA 100%);
+  background: linear-gradient(135deg, #711f8d 0%, #a818da 100%);
   font-weight: 700;
   cursor: pointer;
 }
