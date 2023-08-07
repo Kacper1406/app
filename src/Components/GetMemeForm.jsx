@@ -1,12 +1,15 @@
+import { useState } from "react";
 import memesData from "../data/memeData";
 
 const GetMemeForm = () => {
+  const [memeImg, setMemeImg] = useState("");
+  const memesArr = memesData.data.memes;
+  const randomItem = Math.floor(Math.random() * memesArr.length);
+
   const getMeme = (e) => {
-    e.preventDefault();
-    const memesArr = memesData.data.memes;
-    const randomItem = Math.floor(Math.random() * memesArr.length);
     const url = memesArr[randomItem].url;
-    console.log(url);
+    setMemeImg(url);
+    e.preventDefault();
   };
 
   return (
@@ -18,6 +21,11 @@ const GetMemeForm = () => {
         </div>
         <button onClick={getMeme}>Get your meme!</button>
       </form>
+      <div className='meme-img'>
+        {memeImg.length > 0 ? (
+          <img src={memeImg} alt='random img' width={300} height={300} />
+        ) : null}
+      </div>
     </main>
   );
 };

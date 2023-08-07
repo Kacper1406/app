@@ -71,3 +71,11 @@ form button {
   font-weight: 700;
   cursor: pointer;
 }
+
+.meme-img {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
