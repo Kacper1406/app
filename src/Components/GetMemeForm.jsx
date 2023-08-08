@@ -2,7 +2,12 @@ import { useState } from "react";
 import memesData from "../data/memeData";
 
 const GetMemeForm = () => {
-  const [memeImg, setMemeImg] = useState("");
+  const [memeImg, setMemeImg] = useState({
+    topText: "",
+    bottomText: "",
+    randomImage: "",
+  });
+
   const memesArr = memesData.data.memes;
   const randomItem = Math.floor(Math.random() * memesArr.length);
 
